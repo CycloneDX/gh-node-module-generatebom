@@ -28,9 +28,14 @@ try {
   output = execSync(command, { encoding: 'utf-8' });
   console.log(output);
 
-  const bomContents = fs.readFileSync(`${out}/bom.xml`).toString('utf8');
   console.log('BOM Contents:');
-  console.log(bomContents);
+  if (json) {
+    let bomContents = fs.readFileSync(`${out}/bom.json`).toString('utf8');
+    console.log(bomContents);
+  } else {
+    let bomContents = fs.readFileSync(`${out}/bom.xml`).toString('utf8');
+    console.log(bomContents);
+  }
 } catch (error) {
   core.setFailed(error.message);
 }
