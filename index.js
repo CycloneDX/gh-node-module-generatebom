@@ -15,6 +15,7 @@ try {
   const path = core.getInput('path');
   const out = core.getInput('out');
   const json = core.getInput('json') != 'false';
+  const githubBearerToken = core.getInput('githubBearerToken');
 
   console.log('Options:');
   console.log(`  path: ${path}`);
@@ -25,6 +26,12 @@ try {
   if (json) command += ' --json';
 
   console.log(`Running: ${command}`);
+
+  if (githubBearerToken != '') {
+    console.log('With GitHub bearer token');
+    command += ' --githubBearerToken ' + githubBearerToken;
+  }
+
   output = execSync(command, { encoding: 'utf-8' });
   console.log(output);
 
