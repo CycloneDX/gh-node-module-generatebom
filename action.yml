@@ -9,6 +9,10 @@ inputs:
     description: 'Output directory'
     default: ./
     required: false
+  json:
+    description: 'Produce a JSON BOM instead of XML, set to any value instead of false'
+    default: 'false'
+    required: false
 runs:
   using: 'node12'
   main: 'index.js'

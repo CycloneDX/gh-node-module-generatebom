@@ -11,11 +11,19 @@ Github action to generate a CycloneDX BOM for .NET projects
 
 ### `path`
 
-**Required** The path to a .sln, .csproj, .vbproj, or packages.config file or the path to a directory which will be recursively analyzed for packages.config files
+**Required** The path to a .sln, .csproj, .vbproj, or packages.config file or the path to a directory which will be recursively analyzed for packages.config files.
+
+Be sure to quote paths with spaces.
 
 ### `out`
 
 Output directory
+
+Be sure to quote paths with spaces.
+
+### `json`
+
+Produce a JSON BOM instead of XML, set to any value instead of false
 
 ## Example usage
 

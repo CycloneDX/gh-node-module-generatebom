@@ -14,11 +14,16 @@ try {
 
   const path = core.getInput('path');
   const out = core.getInput('out');
+  const json = core.getInput('json') != 'false';
 
-  console.log(`Path: ${path}`);
-  console.log(`Output path: ${out}`);
+  console.log('Options:');
+  console.log(`  path: ${path}`);
+  console.log(`  out: ${out}`);
+  console.log(`  json: ${json}`);
 
   let command = `dotnet CycloneDX ${path} --out ${out}`
+  if (json) command += ' --json';
+
   console.log(`Running: ${command}`);
   output = execSync(command, { encoding: 'utf-8' });
   console.log(output);
