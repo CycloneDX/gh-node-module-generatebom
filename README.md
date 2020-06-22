@@ -35,4 +35,5 @@ Optionally provide the GitHub action bearer token for license resolution.
 uses: CycloneDX/cyclonedx-dotnet-generatebom@master
 with:
   path: 'Example.sln'
+  githubBearerToken: ${{ secrets.GITHUB_TOKEN }}
 ```
