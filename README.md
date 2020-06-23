@@ -3,9 +3,7 @@
 [![Group Discussion](https://img.shields.io/badge/discussion-groups.io-blue.svg)](https://groups.io/g/CycloneDX)
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/CycloneDX_Spec)
 
-# CycloneDX .NET Generate BOM action
-
-Github action to generate a CycloneDX BOM for .NET projects
+# GitHub action to generate a CycloneDX SBOM for .NET
 
 ## Inputs
 
@@ -17,7 +15,7 @@ Be sure to quote paths with spaces.
 
 ### `out`
 
-Output directory
+Output directory, default is "./"
 
 Be sure to quote paths with spaces.
 
@@ -27,7 +25,7 @@ Produce a JSON BOM instead of XML, set to any value instead of false.
 
 ### `githubBearerToken`
 
-Optionally provide the GitHub action bearer token for license resolution.
+Optionally provide the GitHub action bearer token for license resolution (example below).
 
 ## Example usage
 
