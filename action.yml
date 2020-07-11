@@ -13,7 +13,7 @@ inputs:
     description: 'Produce a JSON BOM instead of XML, set to any value instead of false'
     default: 'false'
     required: false
-  githubBearerToken:
+  github-bearer-token:
     description: 'Optionally provide the GitHub action bearer token for license resolution.'
     default: ''
     required: false
