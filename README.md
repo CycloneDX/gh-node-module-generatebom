@@ -3,35 +3,24 @@
 [![Group Discussion](https://img.shields.io/badge/discussion-groups.io-blue.svg)](https://groups.io/g/CycloneDX)
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/CycloneDX_Spec)
 
-# GitHub action to generate a CycloneDX SBOM for .NET
+# GitHub action to generate a CycloneDX SBOM for Node.js
 
 ## Inputs
 
 ### `path`
 
-**Required** The path to a .sln, .csproj, .vbproj, or packages.config file or the path to a directory which will be recursively analyzed for packages.config files.
+The path to a Node.js project, default is "./"
 
 Be sure to quote paths with spaces.
 
-### `out`
+### `output`
 
-Output directory, default is "./"
+Output filename, default is "./bom.xml"
 
 Be sure to quote paths with spaces.
-
-### `json`
-
-Produce a JSON BOM instead of XML, set to any value instead of false.
-
-### `githubBearerToken`
-
-Optionally provide the GitHub action bearer token for license resolution (example below).
 
 ## Example usage
 
 ```
-uses: CycloneDX/cyclonedx-dotnet-generatebom@master
-with:
-  path: 'Example.sln'
-  githubBearerToken: ${{ secrets.GITHUB_TOKEN }}
+uses: CycloneDX/gh-node-module-generatebom@master
 ```
