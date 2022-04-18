@@ -19,8 +19,18 @@ Output filename, default is "./bom.xml"
 
 Be sure to quote paths with spaces.
 
-## Example usage
+## Example simple usage
 
 ```
 uses: CycloneDX/gh-node-module-generatebom@master
+```
+
+## Example step that defines the output and path (both are optional)
+
+```
+- name: Create SBOM step
+  uses: CycloneDX/gh-node-module-generatebom@master
+  with:
+    output: 'test.bom.xml'
+    path: './bom_directory/'
 ```
