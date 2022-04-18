@@ -60,3 +60,4 @@ jobs:
         with: 
           output: './test.app.bom.xml'
 ```
+
