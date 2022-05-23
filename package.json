@@ -30,6 +30,8 @@
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "CycloneDX",
+    "BOM",
+    "SBOM"
   ]
 }
