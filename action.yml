@@ -1,15 +1,15 @@
-name: 'CycloneDX Node.js Generate SBOM'
+name: CycloneDX Node.js Generate SBOM
 author: Patrick Dwyer
-description: 'Github action to generate a CycloneDX BOM for Node.js projects'
+description: Github action to generate a CycloneDX BOM for Node.js projects
 inputs:
   path:
-    description: 'The path to a Node.js project'
+    description: The path to a Node.js project
     default: ./
     required: false
   output:
-    description: 'Output filename'
+    description: Output filename
     default: ./bom.xml
     required: false
 runs:
-  using: 'node12'
+  using: node16 # This should be consistent with esbuild.config.mjs 'target'.
   main: dist/index.js
