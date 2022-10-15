@@ -25,7 +25,7 @@ try {
     execSync('cyclonedx-bom --help');
   } catch (error) {
     console.log('Installing CycloneDX...');
-    let output = execSync('npm install -g @cyclonedx/bom', { encoding: 'utf-8' });
+    let output = execSync("npm install -g '@cyclonedx/bom@<4'", { encoding: 'utf-8' });
     console.log(output);
   }
 
