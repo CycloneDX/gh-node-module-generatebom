@@ -5,6 +5,10 @@
 
 # GitHub action to generate a CycloneDX SBOM for Node.js
 
+This GitHub action will create a a valid CycloneDX Software Bill-of-Materials (SBOM) containing an aggregate of all project dependencies. CycloneDX is a lightweight SBOM specification that is easily created, human and machine readable, and simple to parse.
+
+This GitHub action requires a node_modules directory so this action will typically need to run after an npm build.
+
 ## Inputs
 
 ### `path`
@@ -19,8 +23,40 @@ Output filename, default is "./bom.xml"
 
 Be sure to quote paths with spaces.
 
-## Example usage
+## Example simple usage
 
 ```
 uses: CycloneDX/gh-node-module-generatebom@master
+```
+
+## Example step that defines the output and path (both are optional)
+
+```
+- name: Create SBOM step
+  uses: CycloneDX/gh-node-module-generatebom@master
+  with:
+    path: './node_project/'
+    output: './bom_directory/test.app.bom.xml'
+```
+
+## Complete Action with npm build and SBOM creation
+
+```
+name: Build javascript project
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Install and build javascript
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install
+      - name: Create SBOM with CycloneDX
+        uses: CycloneDX/gh-node-module-generatebom@master
+        with: 
+          output: './test.app.bom.xml'
 ```
