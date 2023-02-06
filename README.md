@@ -26,14 +26,14 @@ Be sure to quote paths with spaces.
 ## Example simple usage
 
 ```
-uses: CycloneDX/gh-node-module-generatebom@master
+uses: CycloneDX/gh-node-module-generatebom@v1
 ```
 
 ## Example step that defines the output and path (both are optional)
 
 ```
 - name: Create SBOM step
-  uses: CycloneDX/gh-node-module-generatebom@master
+  uses: CycloneDX/gh-node-module-generatebom@v1
   with:
     path: './node_project/'
     output: './bom_directory/test.app.bom.xml'
@@ -50,8 +50,7 @@ jobs:
     name: Install and build javascript
     steps:
       - uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '14'
       - run: npm install
