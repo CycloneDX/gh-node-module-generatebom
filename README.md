@@ -25,13 +25,13 @@ Be sure to quote paths with spaces.
 
 ## Example simple usage
 
-```
+```yaml
 uses: CycloneDX/gh-node-module-generatebom@v1
 ```
 
 ## Example step that defines the output and path (both are optional)
 
-```
+```yaml
 - name: Create SBOM step
   uses: CycloneDX/gh-node-module-generatebom@v1
   with:
@@ -41,7 +41,7 @@ uses: CycloneDX/gh-node-module-generatebom@v1
 
 ## Complete Action with npm build and SBOM creation
 
-```
+```yaml
 name: Build javascript project
 on: push
 jobs:
