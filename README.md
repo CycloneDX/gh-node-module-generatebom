@@ -5,7 +5,8 @@
 
 # GitHub action to generate a CycloneDX SBOM for Node.js
 
-This GitHub action will create a a valid CycloneDX Software Bill-of-Materials (SBOM) containing an aggregate of all project dependencies. CycloneDX is a lightweight SBOM specification that is easily created, human and machine readable, and simple to parse.
+This GitHub action will create a a valid CycloneDX Software Bill-of-Materials (SBOM) containing an aggregate of all project dependencies.
+CycloneDX is a lightweight SBOM specification that is easily created, human and machine readable, and simple to parse.
 
 This GitHub action requires a node_modules directory so this action will typically need to run after an npm build.
 
@@ -17,6 +18,10 @@ The path to a Node.js project, default is "./"
 
 Be sure to quote paths with spaces.
 
+### `json`
+
+Produces JSON output instead of XML if set to any value other than the default of `false`.
+
 ### `output`
 
 Output filename, default is "./bom.xml"
@@ -26,7 +31,7 @@ Be sure to quote paths with spaces.
 ## Example simple usage
 
 ```yaml
-uses: CycloneDX/gh-node-module-generatebom@v1
+  uses: CycloneDX/gh-node-module-generatebom@v1
 ```
 
 ## Example step that defines the output and path (both are optional)
@@ -39,7 +44,17 @@ uses: CycloneDX/gh-node-module-generatebom@v1
     output: './bom_directory/test.app.bom.xml'
 ```
 
-## Complete Action with npm build and SBOM creation
+## Example to create a JSON SBOM
+This example also shows the use of pinned patch release version.
+
+```yaml
+- name: Create SBOM step
+  uses: CycloneDX/gh-node-module-generatebom@v1.0.2
+  with:
+    json: true
+```
+
+## Complete Action with npm build and XML SBOM creation
 
 ```yaml
 name: Build javascript project

@@ -6,6 +6,10 @@ inputs:
     description: 'The path to a Node.js project'
     default: ./
     required: false
+  json:
+    description: 'Produce a JSON BOM instead of XML, set to any value instead of false (default)'
+    default: 'false'
+    required: false
   output:
     description: 'Output filename'
     default: ./bom.xml
