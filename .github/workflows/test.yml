@@ -1,0 +1,49 @@
+# docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: "test"
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # unit tests
+  # units:
+  #  name: unit tests
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - uses: actions/checkout@v3
+  #    - run: npm ci
+  #    - run: npm test
+
+  # test action works running from the graph
+  dogfooding:
+    name: dogfooding ${{ matrix.outputFormat }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        outputFormat: [json, xml]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run : npm ci
+      - name: dogfooding
+        uses: ./
+        with:
+          output: ./bom.${{ matrix.outputFormat }}
+      - name: artifact dogfooding results
+        if: ${{ ! cancelled() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dogfooding-${{ matrix.outputFormat }}
+          path: ./bom.${{ matrix.outputFormat }}
