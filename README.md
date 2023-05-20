@@ -59,3 +59,7 @@ jobs:
         with: 
           output: './test.app.bom.xml'
 ```
+
+## Internals
+
+This action uses [`@cyclonedx/bom`](https://www.npmjs.com/package/@cyclonedx/bom) to generate SBOMs.
