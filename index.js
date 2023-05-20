@@ -20,7 +20,7 @@ const core = require('@actions/core');
 const execSync = require('child_process').execSync;
 
 try {
-  // check it CycloneDX is installed
+  // check if CycloneDX is installed
   try {
     execSync('cyclonedx-bom --help');
   } catch (error) {
