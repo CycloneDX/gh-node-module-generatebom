@@ -62,4 +62,4 @@ jobs:
 
 ## Internals
 
-This action uses [`@cyclonedx/bom`](https://www.npmjs.com/package/@cyclonedx/bom) to generate SBOMs.
+This action uses `@cyclonedx/bom@<4`. See [`@cyclonedx/bom` in NPMjs](https://www.npmjs.com/package/@cyclonedx/bom).
