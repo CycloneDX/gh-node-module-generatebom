@@ -8,10 +8,10 @@
 >     # see for usage: https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm
 >     run: npx @cyclonedx/cyclonedx-npm@^1 # your options here
 >   ```
-> - for YARN projects: [`@cyclonedx/cyclonedx-yarn`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-yarn)
+> - for YARN projects: [`@cyclonedx/yarn-plugin-cyclonedx`](https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx)
 >   ```yaml
 >   - name: Create SBOM step
->     # see for usage: https://www.npmjs.com/package/%40cyclonedx/cyclonedx-yarn
+>     # see for usage: https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx
 >     run: yarn dlx -q @cyclonedx/yarn-plugin-cyclonedx@^1 # your options here
 >   ```
 >  - for PNPM projects: *to be announced*
