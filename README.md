@@ -1,5 +1,5 @@
 >
-> This github action is considdered deprecated.  
+> This GitHub Action is considdered deprecated.
 > Instead, you may use one the following tools in your github workflow:
 >
 > - for NPM projects: [`@yclonedx/cyclonedx-npm`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
