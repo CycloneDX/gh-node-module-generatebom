@@ -17,7 +17,7 @@
 >  - for PNPM projects: *to be announced*
 > 
 
-For other node-js related CycloneDX SBOM generators, see also: <https://github.com/CycloneDX/cyclonedx-node-module/blob/master/README.md>
+For other Node.js related CycloneDX SBOM generators, see also: <https://github.com/CycloneDX/cyclonedx-node-module/blob/master/README.md>
 
 ----
 
