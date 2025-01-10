@@ -1,3 +1,26 @@
+>
+> This GitHub Action is considered deprecated.
+> Instead, you may use one the following tools in your github workflow:
+>
+> - for NPM projects: [`@yclonedx/cyclonedx-npm`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
+>   ```yaml
+>   - name: Create SBOM step
+>     # see for usage: https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm
+>     run: npx @cyclonedx/cyclonedx-npm@^1 # your options here
+>   ```
+> - for YARN projects: [`@cyclonedx/yarn-plugin-cyclonedx`](https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx)
+>   ```yaml
+>   - name: Create SBOM step
+>     # see for usage: https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx
+>     run: yarn dlx -q @cyclonedx/yarn-plugin-cyclonedx@^1 # your options here
+>   ```
+>  - for PNPM projects: *to be announced*
+> 
+
+For other Node.js related CycloneDX SBOM generators, see also: <https://github.com/CycloneDX/cyclonedx-node-module/blob/master/README.md>
+
+----
+
 [![Website](https://img.shields.io/badge/https://-cyclonedx.org-blue.svg)](https://cyclonedx.org/)
 [![Slack Invite](https://img.shields.io/badge/Slack-Join-blue?logo=slack&labelColor=393939)](https://cyclonedx.org/slack/invite)
 [![Group Discussion](https://img.shields.io/badge/discussion-groups.io-blue.svg)](https://groups.io/g/CycloneDX)
