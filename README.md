@@ -1,21 +1,20 @@
 > [!NOTE]
-> This GitHub Action is considered deprecated.
-> Instead, you may use one the following tools in your github workflow:
+> This GitHub Action is considered deprecated.  
+> Instead, you may use one of the following tools in your github workflow:
 >
 > - for NPM projects: [`@yclonedx/cyclonedx-npm`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
 >   ```yaml
 >   - name: Create SBOM step
 >     # see for usage: https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm
->     run: npx @cyclonedx/cyclonedx-npm@^1 # your options here
+>     run: npx @cyclonedx/cyclonedx-npm
 >   ```
 > - for YARN projects: [`@cyclonedx/yarn-plugin-cyclonedx`](https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx)
 >   ```yaml
 >   - name: Create SBOM step
 >     # see for usage: https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx
->     run: yarn dlx -q @cyclonedx/yarn-plugin-cyclonedx@^1 # your options here
+>     run: yarn dlx -q @cyclonedx/yarn-plugin-cyclonedx
 >   ```
 >  - for PNPM projects: *to be announced*
-> 
 
 For other Node.js related CycloneDX SBOM generators, see also: <https://github.com/CycloneDX/cyclonedx-node-module/blob/master/README.md>
 
