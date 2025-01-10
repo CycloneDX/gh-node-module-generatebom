@@ -1,4 +1,4 @@
->
+> [!NOTE]
 > This GitHub Action is considered deprecated.
 > Instead, you may use one the following tools in your github workflow:
 >
