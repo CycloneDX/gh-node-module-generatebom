@@ -2,7 +2,7 @@
 > This GitHub Action is considered deprecated.  
 > Instead, you may use one of the following tools in your github workflow:
 >
-> - for NPM projects: [`@yclonedx/cyclonedx-npm`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
+> - for NPM projects: [`@cyclonedx/cyclonedx-npm`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
 >   ```yaml
 >   - name: Create SBOM step
 >     # see for usage: https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm
